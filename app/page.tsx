@@ -1,13 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Model, buildColumns } from "./models/columns";
+import { buildColumns } from "./models/columns";
 import { DataTable } from "./models/data-table";
 import { ColumnDef } from "@tanstack/react-table";
 import { getImage } from "./models/columns";
 import { ModeToggle } from "@/components/ModeToggle";
 
 const HomePage: React.FC = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Model[]>([]);
   const [columns, setColumns] = useState<ColumnDef<Model>[]>([]);
 
   useEffect(() => {
@@ -15,12 +15,12 @@ const HomePage: React.FC = () => {
       const dataResponse = await fetch("/api/models", {
         method: "GET",
       });
-      let data = await dataResponse.json();
+      let data: Model[] = await dataResponse.json();
       setData(data);
       const metadataResponse = await fetch("/api/metadata", {
         method: "GET",
       });
-      let metadata = await metadataResponse.json();
+      let metadata: Metadata = await metadataResponse.json();
       setColumns(buildColumns(metadata));
     };
     fetchData();
@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
         </div>
         <ModeToggle />
       </div>
-      <DataTable columns={columns} initialVisibilityState={{}} data={data} />
+      <DataTable columns={columns} data={data} />
       <div className="flex justify-between text-center md:mt-6 mb-10">
         <p className="text-sm leading-loose text-muted-foreground">
           Built by{" "}

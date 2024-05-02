@@ -14,7 +14,6 @@ import {
   getSortedRowModel,
   SortingState,
   RowData,
-  ColumnPinningState,
 } from "@tanstack/react-table";
 declare module "@tanstack/react-table" {
   interface ColumnMeta<TData extends RowData, TValue> {
@@ -40,18 +39,15 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
+import { buildInitialVisibilityState } from "./columns";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
-  initialVisibilityState: any;
   data: TData[];
 }
 
 export function DataTable<TData, TValue>({
   columns,
-  initialVisibilityState,
   data,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
@@ -59,10 +55,7 @@ export function DataTable<TData, TValue>({
     []
   );
   const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>(initialVisibilityState);
-  const [columnPinning, setColumnPinning] = React.useState<ColumnPinningState>({
-    left: ["Model"], // Ensure the ID matches exactly what's used in your columns definition
-  });
+    React.useState<VisibilityState>(buildInitialVisibilityState());
 
   const table = useReactTable({
     data,
@@ -78,7 +71,6 @@ export function DataTable<TData, TValue>({
       sorting,
       columnFilters,
       columnVisibility,
-      columnPinning,
     },
   });
 
@@ -87,9 +79,9 @@ export function DataTable<TData, TValue>({
       <div className="flex items-center py-4">
         <Input
           placeholder="Filter models..."
-          value={(table.getColumn("Model")?.getFilterValue() as string) ?? ""}
+          value={(table.getColumn("model")?.getFilterValue() as string) ?? ""}
           onChange={(event) => {
-            table.getColumn("Model")?.setFilterValue(event.target.value);
+            table.getColumn("model")?.setFilterValue(event.target.value);
           }}
           className="max-w-sm"
         />
@@ -105,7 +97,7 @@ export function DataTable<TData, TValue>({
               .filter((column) => column.getCanHide())
               .map((column) => {
                 return (
-                  <div className="flex items-center space-x-2">
+                  <div key={column.id} className="flex items-center space-x-2">
                     <Checkbox
                       id={column.id}
                       key={column.id}
@@ -128,14 +120,7 @@ export function DataTable<TData, TValue>({
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => {
                   return (
-                    <TableHead
-                      key={header.id}
-                      className={
-                        header.column.getIsPinned() === "left"
-                          ? "sticky"
-                          : "relative"
-                      }
-                    >
+                    <TableHead key={header.id}>
                       {header.isPlaceholder
                         ? null
                         : flexRender(

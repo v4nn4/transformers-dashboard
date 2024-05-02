@@ -27,7 +27,31 @@ const accessors = [
   "nb_dimensions",
   "nb_heads",
   "nb_ffn_layers",
+  "gqa",
 ];
+
+const hiddenColumns = ["gqa"];
+
+const getModelMetadata = (
+  modelName: any,
+  desc: ModelMetadata[]
+): ModelMetadata => {
+  return desc.filter((metadata) => modelName.startsWith(metadata.family))[0];
+};
+
+const getColumnMetadata = (
+  accessor: string,
+  desc: ColumnMetadata[]
+): ColumnMetadata => {
+  return desc.filter((metadata) => metadata.accessor === accessor)[0];
+};
+
+const buildInitialVisibilityState = () => {
+  const initialVisibilityState = Object.fromEntries(
+    accessors.map((k) => [k, !hiddenColumns.includes(k)])
+  );
+  return initialVisibilityState;
+};
 
 const getImage = (source: string) => {
   return (
@@ -50,54 +74,6 @@ const getImage = (source: string) => {
   );
 };
 
-const getModelMetadata = (
-  modelName: any,
-  desc: ModelMetadata[]
-): ModelMetadata => {
-  return desc.filter((metadata) => modelName.startsWith(metadata.family))[0];
-};
-
-const getColumnMetadata = (
-  accessor: string,
-  desc: ColumnMetadata[]
-): ColumnMetadata => {
-  return desc.filter((metadata) => metadata.accessor === accessor)[0];
-};
-
-type Model = {
-  model: string;
-  context_length: number;
-  vocabulary_size: number;
-  nb_parameters: number;
-  nb_layers: number;
-  nb_dimensions: number;
-  nb_heads: number;
-  nb_ffn_layers: number;
-  nb_tokens: number;
-  gqa: boolean;
-};
-
-type ColumnMetadata = {
-  accessor: string;
-  name: string;
-  abbr: string;
-  description: string;
-};
-
-type ModelMetadata = {
-  family: string;
-  description: string;
-  urlPaper: string;
-  source: string;
-  firm: string;
-  releaseDate: string;
-};
-
-type Metadata = {
-  columns: ColumnMetadata[];
-  models: ModelMetadata[];
-};
-
 let convertDateFormat = (dateStr: string): string => {
   const date = new Date(dateStr);
   const formattedDate = date.toLocaleDateString("en-US", {
@@ -112,12 +88,13 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
     const columnMetadata = getColumnMetadata(k, metadata.columns);
     return {
       accessorKey: k,
+      id: k,
       meta: {
+        accessor: columnMetadata.accessor,
         name: columnMetadata.name,
         abbr: columnMetadata.abbr,
         desc: columnMetadata.description,
       },
-      id: columnMetadata.abbr,
       enableSorting: true,
       enableHiding: k !== "model",
       header: ({ column }) => (
@@ -129,7 +106,7 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
                 column.toggleSorting(column.getIsSorted() === "asc")
               }
             >
-              {column.id}
+              {columnMetadata.abbr}
               <HoverCard>
                 <HoverCardTrigger asChild>
                   <InfoCircledIcon className="ml-1" />
@@ -162,7 +139,7 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
           | boolean
           | undefined;
         if (value === undefined || value === null) return <></>;
-        if (column.id === "Model") {
+        if (column.id === "model") {
           const modelDesc = getModelMetadata(value, metadata.models);
           return (
             <HoverCard>
@@ -197,10 +174,10 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
         if (value === -1) {
           return <>-</>;
         }
-        if (column.id === "Nb Params") {
+        if (column.id === "nb_parameters") {
           return <>{value}B</>;
         }
-        if (column.id === "Tokens") {
+        if (column.id === "nb_tokens") {
           return <>{value}T</>;
         }
         const isBoolean =
@@ -219,4 +196,4 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
   });
 };
 
-export { type Model, buildColumns, getImage };
+export { buildColumns, getImage, buildInitialVisibilityState };
