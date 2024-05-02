@@ -126,7 +126,7 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
                 column.toggleSorting(column.getIsSorted() === "asc")
               }
             >
-              {column.id}
+              {columnMetadata.abbr}
               <CaretSortIcon className="ml-2 h-4 w-4" />
             </Button>
           )}
