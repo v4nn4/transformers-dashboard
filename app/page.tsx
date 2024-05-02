@@ -36,10 +36,12 @@ const HomePage: React.FC = () => {
             A curated list of transformer models and their parameters.
           </p>
         </div>
-        <ModeToggle />
+        <div className="min-w-10">
+          <ModeToggle />
+        </div>
       </div>
       <DataTable columns={columns} data={data} />
-      <div className="flex justify-between text-center md:mt-6 mb-10">
+      <div className="flex justify-between mt-6 mb-10">
         <p className="text-sm leading-loose text-muted-foreground">
           Built by{" "}
           <a
@@ -61,11 +63,10 @@ const HomePage: React.FC = () => {
           </a>
           . Last updated on 2024-05-02.
         </p>
-        <div className="flex items-center gap-4">
+        <div className="min-w-10">
           <a
             target="_blank"
             rel="noreferrer"
-            className="text-slate-800"
             href="https://github.com/v4nn4/transformers-dashboard"
           >
             {getImage("github")}
