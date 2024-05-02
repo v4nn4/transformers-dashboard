@@ -1,0 +1,169 @@
+{
+    "columns": [
+        {
+            "accessor": "model",
+            "name": "Model",
+            "abbr": "Model"
+        },
+        {
+            "accessor": "context_length",
+            "name": "Context Length",
+            "abbr": "Context",
+            "description": "Context Length, maximum number of tokens allowed as input"
+        },
+        {
+            "accessor": "vocabulary_size",
+            "name": "Vocabulary Size",
+            "abbr": "Vocab Size",
+            "description": "Vocabulary size, number of unique tokens handled by the model"
+        },
+        {
+            "accessor": "nb_parameters",
+            "name": "Parameters Count",
+            "abbr": "Nb Params",
+            "description": "Number of trainable model parameters, in billion"
+        },
+        {
+            "accessor": "nb_layers",
+            "name": "Number of Layers",
+            "abbr": "N",
+            "description": "Number of layers used in encoder/decoder"
+        },
+        {
+            "accessor": "nb_dimensions",
+            "name": "Hidden Dimensions",
+            "abbr": "d_model",
+            "description": "Embedding dimension"
+        },
+        {
+            "accessor": "nb_heads",
+            "name": "Attention Heads",
+            "abbr": "h",
+            "description": "Number of attention heads"
+        },
+        {
+            "accessor": "nb_ffn_layers",
+            "name": "Feed Forward Layers",
+            "abbr": "d_ff",
+            "description": "Dimension of the feed-forward layer, when applicable"
+        },
+        {
+            "accessor": "nb_tokens",
+            "name": "Training Tokens",
+            "abbr": "Tokens",
+            "description": "Number of tokens used for training, in trillion"
+        },
+        {
+            "accessor": "gqa",
+            "name": "Group Query Attention",
+            "abbr": "GQA",
+            "description": "Used Group Query Attention"
+        }
+    ],
+    "models": [
+        {
+            "family": "gpt-1",
+            "firm": "openai",
+            "description": "Improving language understanding with unsupervised learning",
+            "urlPaper": "https://openai.com/research/language-unsupervised",
+            "source": "openai",
+            "releaseDate": "2018-06-11"
+        },
+        {
+            "family": "bert",
+            "firm": "google",
+            "description": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+            "urlPaper": "https://arxiv.org/abs/1810.04805",
+            "source": "arxiv",
+            "releaseDate": "2018-10-11"
+        },
+        {
+            "family": "gpt-2",
+            "firm": "openai",
+            "description": "Better language models and their implications",
+            "urlPaper": "https://openai.com/research/better-language-models",
+            "source": "openai",
+            "releaseDate": "2019-02-14"
+        },
+        {
+            "family": "gpt-3",
+            "firm": "openai",
+            "description": "Language Models are Few-Shot Learners",
+            "urlPaper": "https://arxiv.org/abs/2005.14165",
+            "source": "openai",
+            "releaseDate": "2020-05-28"
+        },
+        {
+            "family": "llama-1",
+            "firm": "meta",
+            "description": "LLaMA: Open and Efficient Foundation Language Models",
+            "urlPaper": "https://arxiv.org/abs/2302.13971",
+            "source": "arxiv",
+            "releaseDate": "2023-02-27"
+        },
+        {
+            "family": "llama-2",
+            "firm": "meta",
+            "description": "Llama 2: Open Foundation and Fine-Tuned Chat Models",
+            "urlPaper": "https://arxiv.org/abs/2307.09288",
+            "source": "arxiv",
+            "releaseDate": "2023-07-18"
+        },
+        {
+            "family": "mistral-7b",
+            "firm": "mistral-ai",
+            "description": "Mistral 7B",
+            "urlPaper": "https://arxiv.org/pdf/2310.06825",
+            "source": "arxiv",
+            "releaseDate": "2023-10-10"
+        },
+        {
+            "family": "mixtral-8x7b",
+            "firm": "mistral-ai",
+            "description": "Mixtral of Experts",
+            "urlPaper": "https://arxiv.org/pdf/2401.04088",
+            "source": "arxiv",
+            "releaseDate": "2024-01-08"
+        },
+        {
+            "family": "gemma",
+            "firm": "google",
+            "description": "Gemma: Open Models Based on Gemini Research and Technology",
+            "urlPaper": "https://arxiv.org/abs/2403.08295",
+            "source": "arxiv",
+            "releaseDate": "2024-03-13"
+        },
+        {
+            "family": "mixtral-8x22b",
+            "firm": "mistral-ai",
+            "description": "Cheaper, Better, Faster, Stronger",
+            "urlPaper": "https://mistral.ai/news/mixtral-8x22b/",
+            "source": "arxiv",
+            "releaseDate": "2024-04-17"
+        },
+        {
+            "family": "phi-3",
+            "firm": "microsoft",
+            "description": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
+            "urlPaper": "https://arxiv.org/abs/2404.14219",
+            "source": "arxiv",
+            "releaseDate": "2024-04-22"
+        },
+        {
+            "family": "openelm",
+            "firm": "apple",
+            "description": "OpenELM: An Efficient Language Model Family with Open-source Training and Inference Framework",
+            "urlPaper": "https://arxiv.org/abs/2404.14619",
+            "source": "arxiv",
+            "releaseDate": "2024-04-22"
+        },
+        {
+            "family": "llama-3",
+            "firm": "meta",     
+            "description": "Introducing Meta Llama 3: The most capable openly available LLM to date",
+            "urlPaper": "https://ai.meta.com/blog/meta-llama-3/",
+            "source": "meta",
+            "releaseDate": "2024-04-18"
+        }
+    ]
+}
