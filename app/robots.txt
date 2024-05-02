@@ -1,0 +1,3 @@
+User-Agent: *
+Allow: /
+Sitemap: https://transformers-dashboard.vercel.app//sitemap.xml

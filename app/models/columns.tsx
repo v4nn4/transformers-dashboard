@@ -15,8 +15,7 @@ import {
   InfoCircledIcon,
   CalendarIcon,
 } from "@radix-ui/react-icons";
-import { Column, ColumnDef } from "@tanstack/react-table";
-import { describe } from "node:test";
+import { ColumnDef } from "@tanstack/react-table";
 
 const accessors = [
   "model",
@@ -32,12 +31,22 @@ const accessors = [
 
 const getImage = (source: string) => {
   return (
-    <Image
-      src={`./images/logos/${source}.svg`}
-      width={20}
-      height={20}
-      alt={source}
-    />
+    <>
+      <Image
+        src={`./images/logos/${source}.svg`}
+        width={20}
+        height={20}
+        alt={source}
+        className="block dark:hidden"
+      />
+      <Image
+        src={`./images/logos/${source}_dark.svg`}
+        width={20}
+        height={20}
+        alt={source}
+        className="hidden dark:block"
+      />{" "}
+    </>
   );
 };
 
@@ -210,4 +219,4 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
   });
 };
 
-export { type Model, buildColumns };
+export { type Model, buildColumns, getImage };
