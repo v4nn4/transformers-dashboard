@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
           Transformers Dashboard
         </h1>
         <p className="text-sm font-medium leading-none text-muted-foreground">
-          Last updated 2024-05-02
+          A curated list of transformer models and their parameters.
         </p>
       </div>
       <DataTable columns={columns} initialVisibilityState={{}} data={data} />
@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
           >
             shadcn/ui
           </a>
-          .
+          . Last updated on 2024-05-02.
         </p>
 
         <div className="flex items-center gap-4">

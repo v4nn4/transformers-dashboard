@@ -32,7 +32,12 @@ const accessors = [
 
 const getImage = (source: string) => {
   return (
-    <Image src={`./svg/${source}.svg`} width={20} height={20} alt={source} />
+    <Image
+      src={`./images/logos/${source}.svg`}
+      width={20}
+      height={20}
+      alt={source}
+    />
   );
 };
 
