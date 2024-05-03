@@ -16,6 +16,7 @@ import {
   CalendarIcon,
 } from "@radix-ui/react-icons";
 import { ColumnDef } from "@tanstack/react-table";
+import KatexSpan from "@/components/KatexSpan";
 
 const accessors = [
   "model",
@@ -27,10 +28,11 @@ const accessors = [
   "nb_dimensions",
   "nb_heads",
   "nb_ffn_layers",
+  "activation",
   "gqa",
 ];
 
-const hiddenColumns = ["gqa"];
+const hiddenColumns = ["activation", "gqa"];
 
 const getModelMetadata = (
   modelName: any,
@@ -46,11 +48,20 @@ const getColumnMetadata = (
   return desc.filter((metadata) => metadata.accessor === accessor)[0];
 };
 
-const buildInitialVisibilityState = () => {
-  const initialVisibilityState = Object.fromEntries(
-    accessors.map((k) => [k, !hiddenColumns.includes(k)])
-  );
-  return initialVisibilityState;
+const getActivationFormula = (
+  activation: string,
+  desc: ActivationMetadata[]
+): string => {
+  const metadata = desc.filter((metadata) => activation === metadata.name);
+  if (metadata === undefined) {
+    return "-";
+  } else {
+    if (metadata.length == 1) {
+      return metadata[0].formula;
+    } else {
+      return "-";
+    }
+  }
 };
 
 const getImage = (source: string) => {
@@ -72,6 +83,13 @@ const getImage = (source: string) => {
       />{" "}
     </>
   );
+};
+
+const buildInitialVisibilityState = () => {
+  const initialVisibilityState = Object.fromEntries(
+    accessors.map((k) => [k, !hiddenColumns.includes(k)])
+  );
+  return initialVisibilityState;
 };
 
 let convertDateFormat = (dateStr: string): string => {
@@ -133,11 +151,7 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
         </>
       ),
       cell: ({ row, column }) => {
-        const value = row.getValue(column.id) as
-          | string
-          | number
-          | boolean
-          | undefined;
+        const value = row.getValue(column.id) as string | undefined;
         if (value === undefined || value === null) return <></>;
         if (column.id === "model") {
           const modelDesc = getModelMetadata(value, metadata.models);
@@ -171,7 +185,11 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
             </HoverCard>
           );
         }
-        if (value === -1) {
+        if (
+          value === undefined ||
+          value === null ||
+          value.toString() === "-1"
+        ) {
           return <>-</>;
         }
         if (column.id === "nb_parameters") {
@@ -179,6 +197,20 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
         }
         if (column.id === "nb_tokens") {
           return <>{value}T</>;
+        }
+        if (column.id === "activation") {
+          return (
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <div className="flex align-left">{value}</div>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-100">
+                <KatexSpan
+                  text={getActivationFormula(value, metadata.activations)}
+                />
+              </HoverCardContent>
+            </HoverCard>
+          );
         }
         const isBoolean =
           value.toString() === "true" || value.toString() === "false";

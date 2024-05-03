@@ -33,6 +33,7 @@
     "nb_heads": 10,
     "nb_ffn_layers": -1,
     "nb_tokens": 1.8,
+    "activation": "SwiGLU",
     "gqa": false
   },
   {
@@ -45,6 +46,7 @@
     "nb_heads": 12,
     "nb_ffn_layers": -1,
     "nb_tokens": 1.8,
+    "activation": "SwiGLU",
     "gqa": false
   },
   {
@@ -57,6 +59,7 @@
     "nb_heads": 16,
     "nb_ffn_layers": -1,
     "nb_tokens": 1.8,
+    "activation": "SwiGLU",
     "gqa": false
   },
   {
@@ -69,6 +72,7 @@
     "nb_heads": 24,
     "nb_ffn_layers": -1,
     "nb_tokens": 1.8,
+    "activation": "SwiGLU",
     "gqa": false
   },
   {
@@ -81,6 +85,7 @@
     "nb_heads": 32,
     "nb_ffn_layers": 8192,
     "nb_tokens": 3.3,
+    "activation": "SiLU",
     "gqa": false
   },
   {
@@ -93,6 +98,7 @@
     "nb_heads": 32,
     "nb_ffn_layers": 8192,
     "nb_tokens": 3.3,
+    "activation": "SiLU",
     "gqa": false
   },
   {
@@ -105,6 +111,7 @@
     "nb_heads": 32,
     "nb_ffn_layers": -1,
     "nb_tokens": 4.8,
+    "activation": "SiLU",
     "gqa": true
   },
   {
@@ -117,6 +124,7 @@
     "nb_heads": 40,
     "nb_ffn_layers": -1,
     "nb_tokens": 4.8,
+    "activation": "SiLU",
     "gqa": true
   },
   {
@@ -129,6 +137,7 @@
     "nb_heads": 48,
     "nb_ffn_layers": 16384,
     "nb_tokens": -1,
+    "activation": "SiLU",
     "gqa": true
   },
   {
@@ -141,6 +150,7 @@
     "nb_heads": 16,
     "nb_ffn_layers": 49152,
     "nb_tokens": 6,
+    "activation": "GeGLU",
     "gqa": false
   },
   {
@@ -153,6 +163,7 @@
     "nb_heads": 8,
     "nb_ffn_layers": 32768,
     "nb_tokens": 3,
+    "activation": "GeGLU",
     "gqa": false
   },
   {
@@ -165,6 +176,7 @@
     "nb_heads": 32,
     "nb_ffn_layers": 14336,
     "nb_tokens": -1,
+    "activation": "SiLU",
     "gqa": true
   },
   {
@@ -177,6 +189,7 @@
     "nb_heads": 32,
     "nb_ffn_layers": 14336,
     "nb_tokens": 8,
+    "activation": "SiLU",
     "gqa": false
   },
   {
@@ -189,6 +202,7 @@
     "nb_heads": 32,
     "nb_ffn_layers": 11008,
     "nb_tokens": 2.0,
+    "activation": "SwiGLU",
     "gqa": false
   },
   {
@@ -201,6 +215,7 @@
     "nb_heads": 40,
     "nb_ffn_layers": 13824,
     "nb_tokens": 2.0,
+    "activation": "SwiGLU",
     "gqa": false
   },
   {
@@ -213,6 +228,7 @@
     "nb_heads": 52,
     "nb_ffn_layers": 22016,
     "nb_tokens": 2.0,
+    "activation": "SwiGLU",
     "gqa": true
   },
   {
@@ -225,6 +241,7 @@
     "nb_heads": 64,
     "nb_ffn_layers": 28672,
     "nb_tokens": 2.0,
+    "activation": "SwiGLU",
     "gqa": true
   },
   {
@@ -237,6 +254,7 @@
     "nb_heads": 32,
     "nb_ffn_layers": 11008,
     "nb_tokens": 1.0,
+    "activation": "SwiGLU",
     "gqa": false
   },
   {
@@ -249,6 +267,7 @@
     "nb_heads": 40,
     "nb_ffn_layers": 13824,
     "nb_tokens": 1.0,
+    "activation": "SwiGLU",
     "gqa": false
   },
   {
@@ -261,6 +280,7 @@
     "nb_heads": 52,
     "nb_ffn_layers": 22016,
     "nb_tokens": 1.4,
+    "activation": "SwiGLU",
     "gqa": false
   },
   {
@@ -273,6 +293,7 @@
     "nb_heads": 64,
     "nb_ffn_layers": 28672,
     "nb_tokens": 1.4,
+    "activation": "SwiGLU",
     "gqa": false
   },
   {
@@ -381,6 +402,7 @@
     "nb_heads": 25,
     "nb_ffn_layers": 3072,
     "nb_tokens": -1.0,
+    "activation": "NewGELU",
     "gqa": false
   },
   {
@@ -393,6 +415,7 @@
     "nb_heads": 12,
     "nb_ffn_layers": 3072,
     "nb_tokens": -1.0,
+    "activation": "GELU",
     "gqa": false
   },
   {
@@ -405,6 +428,7 @@
     "nb_heads": 16,
     "nb_ffn_layers": 4096,
     "nb_tokens": -1.0,
+    "activation": "GELU",
     "gqa": false
   },
   {
@@ -417,6 +441,7 @@
     "nb_heads": 12,
     "nb_ffn_layers": 3072,
     "nb_tokens": -1.0,
+    "activation": "GELU",
     "gqa": false
   }
 ]

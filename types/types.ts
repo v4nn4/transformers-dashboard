@@ -27,7 +27,13 @@ type ModelMetadata = {
   releaseDate: string;
 };
 
+type ActivationMetadata = {
+  name: string;
+  formula: string;
+};
+
 type Metadata = {
   columns: ColumnMetadata[];
   models: ModelMetadata[];
+  activations: ActivationMetadata[];
 };

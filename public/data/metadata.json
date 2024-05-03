@@ -54,6 +54,11 @@
             "description": "Number of tokens used for training, in trillion"
         },
         {
+            "accessor": "activation",
+            "name": "Activation",
+            "abbr": "Activation"
+        },
+        {
             "accessor": "gqa",
             "name": "Group Query Attention",
             "abbr": "GQA",
@@ -159,11 +164,33 @@
         },
         {
             "family": "llama-3",
-            "firm": "meta",     
+            "firm": "meta",
             "description": "Introducing Meta Llama 3: The most capable openly available LLM to date",
             "urlPaper": "https://ai.meta.com/blog/meta-llama-3/",
             "source": "meta",
             "releaseDate": "2024-04-18"
+        }
+    ],
+    "activations": [
+        {
+            "name": "SwiGLU",
+            "formula": "$\\textrm{SwiGLU}(x) = \\max(0, x) + \\sigma(x) \\min(0, x)$"
+        },
+        {
+            "name": "NewGELU",
+            "formula": "$\\textrm{NewGELU}(x) = 0.5 x (1 + \\tanh ( \\sqrt{2/\\pi}(x + 0.044715 x^3)))$"
+        },
+        {
+            "name": "GELU",
+            "formula": "$\\textrm{GELU}(x) = 0.5 x (1 + \\textrm{erf} (x / \\sqrt{2}))$"
+        },
+        {
+            "name": "SiLU",
+            "formula": "$\\textrm{SiLU}(x) = x \\sigma(x)$"
+        },
+        {
+            "name": "GeGLU",
+            "formula": "$\\textrm{GeGLU}(x, W, V, b, c) = \\textrm{GELU}(xW+b) \\otimes (x V + c)$"
         }
     ]
 }
