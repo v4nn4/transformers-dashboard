@@ -30,9 +30,20 @@ const accessors = [
   "nb_ffn_layers",
   "activation",
   "gqa",
+  "gpu_type",
+  "gpu_power",
+  "gpu_hours",
+  "tCO2eq",
 ];
 
-const hiddenColumns = ["activation", "gqa"];
+const hiddenColumns = [
+  "activation",
+  "gqa",
+  "gpu_type",
+  "gpu_power",
+  "gpu_hours",
+  "tCO2eq",
+];
 
 const getModelMetadata = (
   modelName: any,

@@ -34,7 +34,9 @@
     "nb_ffn_layers": -1,
     "nb_tokens": 1.8,
     "activation": "SwiGLU",
-    "gqa": false
+    "gqa": false,
+    "gpu_type": "A100-80GB",
+    "gpu_hours": 9216
   },
   {
     "model": "openelm-450M",
@@ -47,7 +49,9 @@
     "nb_ffn_layers": -1,
     "nb_tokens": 1.8,
     "activation": "SwiGLU",
-    "gqa": false
+    "gqa": false,
+    "gpu_type": "H100-80GB",
+    "gpu_hours": 9216
   },
   {
     "model": "openelm-1.1B",
@@ -60,7 +64,9 @@
     "nb_ffn_layers": -1,
     "nb_tokens": 1.8,
     "activation": "SwiGLU",
-    "gqa": false
+    "gqa": false,
+    "gpu_type": "A100-80GB",
+    "gpu_hours": 33792
   },
   {
     "model": "openelm-3B",
@@ -73,7 +79,9 @@
     "nb_ffn_layers": -1,
     "nb_tokens": 1.8,
     "activation": "SwiGLU",
-    "gqa": false
+    "gqa": false,
+    "gpu_type": "H100-80GB",
+    "gpu_hours": 39936
   },
   {
     "model": "phi-3-mini",
@@ -203,7 +211,11 @@
     "nb_ffn_layers": 11008,
     "nb_tokens": 2.0,
     "activation": "SwiGLU",
-    "gqa": false
+    "gqa": false,
+    "gpu_type": "A100-80GB",
+    "gpu_power": 400,
+    "gpu_hours": 184320,
+    "tCO2eq": 31.22
   },
   {
     "model": "llama-2-13b",
@@ -216,7 +228,11 @@
     "nb_ffn_layers": 13824,
     "nb_tokens": 2.0,
     "activation": "SwiGLU",
-    "gqa": false
+    "gqa": false,
+    "gpu_type": "A100-80GB",
+    "gpu_power": 400,
+    "gpu_hours": 368640,
+    "tCO2eq": 62.44
   },
   {
     "model": "llama-2-34b",
@@ -229,7 +245,11 @@
     "nb_ffn_layers": 22016,
     "nb_tokens": 2.0,
     "activation": "SwiGLU",
-    "gqa": true
+    "gqa": true,
+    "gpu_type": "A100-80GB",
+    "gpu_power": 350,
+    "gpu_hours": 1038336,
+    "tCO2eq": 153.90
   },
   {
     "model": "llama-2-70b",
@@ -242,7 +262,11 @@
     "nb_ffn_layers": 28672,
     "nb_tokens": 2.0,
     "activation": "SwiGLU",
-    "gqa": true
+    "gqa": true,
+    "gpu_type": "A100-80GB",
+    "gpu_power": 400,
+    "gpu_hours": 1720320,
+    "tCO2eq": 291.42
   },
   {
     "model": "llama-1-7b",
@@ -255,7 +279,12 @@
     "nb_ffn_layers": 11008,
     "nb_tokens": 1.0,
     "activation": "SwiGLU",
-    "gqa": false
+    "gqa": false,
+    "gpu_type": "A100-80GB",
+    "gpu_power": 400,
+    "gpu_hours": 82432,
+    "total_mwh": 36,
+    "tCO2eq": 14
   },
   {
     "model": "llama-1-13b",
@@ -268,7 +297,12 @@
     "nb_ffn_layers": 13824,
     "nb_tokens": 1.0,
     "activation": "SwiGLU",
-    "gqa": false
+    "gqa": false,
+    "gpu_type": "A100-80GB",
+    "gpu_power": 400,
+    "gpu_hours": 135168,
+    "total_mwh": 59,
+    "tCO2eq": 23
   },
   {
     "model": "llama-1-33b",
@@ -281,7 +315,12 @@
     "nb_ffn_layers": 22016,
     "nb_tokens": 1.4,
     "activation": "SwiGLU",
-    "gqa": false
+    "gqa": false,
+    "gpu_type": "A100-80GB",
+    "gpu_power": 400,
+    "gpu_hours": 530432,
+    "total_mwh": 233,
+    "tCO2eq": 90
   },
   {
     "model": "llama-1-65b",
@@ -294,7 +333,12 @@
     "nb_ffn_layers": 28672,
     "nb_tokens": 1.4,
     "activation": "SwiGLU",
-    "gqa": false
+    "gqa": false,
+    "gpu_type": "A100-80GB",
+    "gpu_power": 400,
+    "gpu_hours": 1022362,
+    "total_mwh": 449,
+    "tCO2eq": 173
   },
   {
     "model": "gpt-3-175B",

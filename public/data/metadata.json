@@ -63,6 +63,29 @@
             "name": "Group Query Attention",
             "abbr": "GQA",
             "description": "Used Group Query Attention"
+        },
+        {
+        
+            "accessor": "gpu_type",
+            "name": "GPU Type",
+            "abbr": "GPU Type"
+        },
+        {
+        
+            "accessor": "gpu_power",
+            "name": "GPU Power (W)",
+            "abbr": "GPU Power (W)"
+        },
+        {
+            "accessor": "gpu_hours",
+            "name": "GPU Hours",
+            "abbr": "GPU Hours"
+        },
+        {
+            "accessor": "tCO2eq",
+            "name": "Carbon Footprint (tCO2eq)",
+            "abbr": "tC02eq",
+            "description": "Carbon footprint measured in ton of CO2 equivalent (tCO2eq)"
         }
     ],
     "models": [
