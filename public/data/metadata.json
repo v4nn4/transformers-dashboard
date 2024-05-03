@@ -197,23 +197,23 @@
     "activations": [
         {
             "name": "SwiGLU",
-            "formula": "$\\textrm{SwiGLU}(x) = \\max(0, x) + \\sigma(x) \\min(0, x)$"
+            "formula": "\\textrm{SwiGLU}(x) = \\max(0, x) + \\sigma(x) \\min(0, x)"
         },
         {
             "name": "NewGELU",
-            "formula": "$\\textrm{NewGELU}(x) = 0.5 x (1 + \\tanh ( \\sqrt{2/\\pi}(x + 0.044715 x^3)))$"
+            "formula": "\\textrm{NewGELU}(x) = 0.5 x (1 + \\tanh ( \\sqrt{2/\\pi}(x + 0.044715 x^3)))"
         },
         {
             "name": "GELU",
-            "formula": "$\\textrm{GELU}(x) = 0.5 x (1 + \\textrm{erf} (x / \\sqrt{2}))$"
+            "formula": "\\textrm{GELU}(x) = 0.5 x (1 + \\textrm{erf} (x / \\sqrt{2}))"
         },
         {
             "name": "SiLU",
-            "formula": "$\\textrm{SiLU}(x) = x \\sigma(x)$"
+            "formula": "\\textrm{SiLU}(x) = x \\sigma(x)"
         },
         {
             "name": "GeGLU",
-            "formula": "$\\textrm{GeGLU}(x, W, V, b, c) = \\textrm{GELU}(xW+b) \\otimes (x V + c)$"
+            "formula": "\\textrm{GeGLU}(x, W, V, b, c) = \\textrm{GELU}(xW+b) \\otimes (x V + c)"
         }
     ]
 }

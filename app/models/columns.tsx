@@ -16,7 +16,8 @@ import {
   CalendarIcon,
 } from "@radix-ui/react-icons";
 import { ColumnDef } from "@tanstack/react-table";
-import KatexSpan from "@/components/KatexSpan";
+import { BlockMath, InlineMath } from "react-katex";
+import "katex/dist/katex.min.css";
 
 const accessors = [
   "model",
@@ -216,8 +217,8 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
                 <div className="flex align-left">{value}</div>
               </HoverCardTrigger>
               <HoverCardContent className="w-100">
-                <KatexSpan
-                  text={getActivationFormula(value, metadata.activations)}
+                <BlockMath
+                  math={getActivationFormula(value, metadata.activations)}
                 />
               </HoverCardContent>
             </HoverCard>
