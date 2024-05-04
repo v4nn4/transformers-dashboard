@@ -21,6 +21,7 @@ import "katex/dist/katex.min.css";
 
 const accessors = [
   "model",
+  "release_date",
   "context_length",
   "vocabulary_size",
   "nb_tokens",
@@ -31,16 +32,17 @@ const accessors = [
   "nb_ffn_layers",
   "activation",
   "gqa",
-  "gpu_type",
+  "hardware",
   "gpu_power",
   "gpu_hours",
   "tCO2eq",
 ];
 
 const hiddenColumns = [
+  "releaase_date",
   "activation",
   "gqa",
-  "gpu_type",
+  "hardware",
   "gpu_power",
   "gpu_hours",
   "tCO2eq",

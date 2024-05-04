@@ -6,6 +6,11 @@
             "abbr": "Model"
         },
         {
+            "accessor": "release_date",
+            "name": "Release Date",
+            "abbr": "Released"
+        },
+        {
             "accessor": "context_length",
             "name": "Context Length",
             "abbr": "Context",
@@ -65,13 +70,11 @@
             "description": "Used Group Query Attention"
         },
         {
-        
-            "accessor": "gpu_type",
-            "name": "GPU Type",
-            "abbr": "GPU Type"
+            "accessor": "hardware",
+            "name": "Hardware",
+            "abbr": "Hardware"
         },
         {
-        
             "accessor": "gpu_power",
             "name": "GPU Power (W)",
             "abbr": "GPU Power (W)"
@@ -120,6 +123,22 @@
             "urlPaper": "https://arxiv.org/abs/2005.14165",
             "source": "openai",
             "releaseDate": "2020-05-28"
+        },
+        {
+            "family": "opt",
+            "firm": "meta",
+            "description": "OPT: Open Pre-trained Transformer Language Models",
+            "urlPaper": "https://arxiv.org/pdf/2205.01068",
+            "source": "arxiv",
+            "releaseDate": "2022-06-21"
+        },
+        {
+            "family": "palm",
+            "firm": "google",
+            "description": "PaLM: Scaling Language Modeling with Pathways",
+            "urlPaper": "https://arxiv.org/pdf/2204.02311",
+            "source": "arxiv",
+            "releaseDate": "2022-10-05"
         },
         {
             "family": "llama-1",
@@ -175,7 +194,7 @@
             "description": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
             "urlPaper": "https://arxiv.org/abs/2404.14219",
             "source": "arxiv",
-            "releaseDate": "2024-04-22"
+            "releaseDate": "2024-04-23"
         },
         {
             "family": "openelm",
@@ -183,7 +202,7 @@
             "description": "OpenELM: An Efficient Language Model Family with Open-source Training and Inference Framework",
             "urlPaper": "https://arxiv.org/abs/2404.14619",
             "source": "arxiv",
-            "releaseDate": "2024-04-22"
+            "releaseDate": "2024-05-02"
         },
         {
             "family": "llama-3",
@@ -195,6 +214,10 @@
         }
     ],
     "activations": [
+        {
+            "name": "ReLU",
+            "formula": "\\textrm{ReLU}(x) = \\max(0, x)"
+        },
         {
             "name": "SwiGLU",
             "formula": "\\textrm{SwiGLU}(x) = \\max(0, x) + \\sigma(x) \\min(0, x)"
