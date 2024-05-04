@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { buildColumns, getImage } from "@/lib/columns";
+import { buildColumns, getImage } from "@/components/columns";
 import { DataTable } from "@/components/DataTable";
 import { ColumnDef } from "@tanstack/react-table";
 import { ModeToggle } from "@/components/ModeToggle";

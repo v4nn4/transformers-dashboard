@@ -1,5 +1,6 @@
 "use client";
 
+import "@/styles/globals.css";
 import * as React from "react";
 
 import { ChevronDownIcon } from "@radix-ui/react-icons";
@@ -39,7 +40,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { buildInitialVisibilityState } from "../lib/columns";
+import { buildInitialVisibilityState } from "./columns";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
