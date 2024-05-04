@@ -1,4 +1,4 @@
-model,release_date,context_length,vocabulary_size,nb_parameters,nb_layers,nb_dimensions,nb_heads,nb_ffn_layers,nb_tokens,gqa,activation,hardware,gpu_hours,gpu_power,tCO2eq,total_mwh
+model,release_date,context_length,vocabulary_size,nb_parameters,nb_layers,nb_dimensions,nb_heads,nb_ffn_layers,nb_tokens,gqa,activation,hardware,gpu_hours,gpu_power,tco2eq,total_mwh
 llama-3-8b,4/18/24,8192,128256,8,32,4096,32,14336,15,TRUE,,,,,,
 llama-3-70b,4/18/24,8192,128256,70,64,8192,64,28672,15,TRUE,,,,,,
 openelm-270M,4/22/24,2048,32000,0.27,16,1280,10,,1.8,FALSE,SwiGLU,A100-80GB,9216,,,

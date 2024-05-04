@@ -85,7 +85,7 @@
             "abbr": "GPU Hours"
         },
         {
-            "accessor": "tCO2eq",
+            "accessor": "tco2eq",
             "name": "Carbon Footprint (tCO2eq)",
             "abbr": "tC02eq",
             "description": "Carbon footprint measured in ton of CO2 equivalent (tCO2eq)"
@@ -94,7 +94,7 @@
     "models": [
         {
             "family": "gpt-1",
-            "firm": "openai",
+            "company": "openai",
             "description": "Improving language understanding with unsupervised learning",
             "urlPaper": "https://openai.com/research/language-unsupervised",
             "source": "openai",
@@ -102,7 +102,7 @@
         },
         {
             "family": "bert",
-            "firm": "google",
+            "company": "google",
             "description": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
             "urlPaper": "https://arxiv.org/abs/1810.04805",
             "source": "arxiv",
@@ -110,7 +110,7 @@
         },
         {
             "family": "gpt-2",
-            "firm": "openai",
+            "company": "openai",
             "description": "Better language models and their implications",
             "urlPaper": "https://openai.com/research/better-language-models",
             "source": "openai",
@@ -118,7 +118,7 @@
         },
         {
             "family": "gpt-3",
-            "firm": "openai",
+            "company": "openai",
             "description": "Language Models are Few-Shot Learners",
             "urlPaper": "https://arxiv.org/abs/2005.14165",
             "source": "openai",
@@ -126,7 +126,7 @@
         },
         {
             "family": "opt",
-            "firm": "meta",
+            "company": "meta",
             "description": "OPT: Open Pre-trained Transformer Language Models",
             "urlPaper": "https://arxiv.org/pdf/2205.01068",
             "source": "arxiv",
@@ -134,7 +134,7 @@
         },
         {
             "family": "palm",
-            "firm": "google",
+            "company": "google",
             "description": "PaLM: Scaling Language Modeling with Pathways",
             "urlPaper": "https://arxiv.org/pdf/2204.02311",
             "source": "arxiv",
@@ -142,7 +142,7 @@
         },
         {
             "family": "llama-1",
-            "firm": "meta",
+            "company": "meta",
             "description": "LLaMA: Open and Efficient Foundation Language Models",
             "urlPaper": "https://arxiv.org/abs/2302.13971",
             "source": "arxiv",
@@ -150,7 +150,7 @@
         },
         {
             "family": "llama-2",
-            "firm": "meta",
+            "company": "meta",
             "description": "Llama 2: Open Foundation and Fine-Tuned Chat Models",
             "urlPaper": "https://arxiv.org/abs/2307.09288",
             "source": "arxiv",
@@ -158,7 +158,7 @@
         },
         {
             "family": "mistral-7b",
-            "firm": "mistral-ai",
+            "company": "mistral-ai",
             "description": "Mistral 7B",
             "urlPaper": "https://arxiv.org/pdf/2310.06825",
             "source": "arxiv",
@@ -166,7 +166,7 @@
         },
         {
             "family": "mixtral-8x7b",
-            "firm": "mistral-ai",
+            "company": "mistral-ai",
             "description": "Mixtral of Experts",
             "urlPaper": "https://arxiv.org/pdf/2401.04088",
             "source": "arxiv",
@@ -174,7 +174,7 @@
         },
         {
             "family": "gemma",
-            "firm": "google",
+            "company": "google",
             "description": "Gemma: Open Models Based on Gemini Research and Technology",
             "urlPaper": "https://arxiv.org/abs/2403.08295",
             "source": "arxiv",
@@ -182,7 +182,7 @@
         },
         {
             "family": "mixtral-8x22b",
-            "firm": "mistral-ai",
+            "company": "mistral-ai",
             "description": "Cheaper, Better, Faster, Stronger",
             "urlPaper": "https://mistral.ai/news/mixtral-8x22b/",
             "source": "arxiv",
@@ -190,7 +190,7 @@
         },
         {
             "family": "phi-3",
-            "firm": "microsoft",
+            "company": "microsoft",
             "description": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
             "urlPaper": "https://arxiv.org/abs/2404.14219",
             "source": "arxiv",
@@ -198,7 +198,7 @@
         },
         {
             "family": "openelm",
-            "firm": "apple",
+            "company": "apple",
             "description": "OpenELM: An Efficient Language Model Family with Open-source Training and Inference Framework",
             "urlPaper": "https://arxiv.org/abs/2404.14619",
             "source": "arxiv",
@@ -206,7 +206,7 @@
         },
         {
             "family": "llama-3",
-            "firm": "meta",
+            "company": "meta",
             "description": "Introducing Meta Llama 3: The most capable openly available LLM to date",
             "urlPaper": "https://ai.meta.com/blog/meta-llama-3/",
             "source": "meta",

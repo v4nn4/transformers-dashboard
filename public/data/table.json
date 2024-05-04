@@ -1,31 +1,5 @@
 [
   {
-    "model": "llama-3-8b",
-    "release_date": "2024-04-18",
-    "context_length": 8192,
-    "vocabulary_size": 128256,
-    "nb_parameters": 8.0,
-    "nb_layers": 32,
-    "nb_dimensions": 4096,
-    "nb_heads": 32,
-    "nb_ffn_layers": 14336,
-    "nb_tokens": 15.0,
-    "gqa": true
-  },
-  {
-    "model": "llama-3-70b",
-    "release_date": "2024-04-18",
-    "context_length": 8192,
-    "vocabulary_size": 128256,
-    "nb_parameters": 70.0,
-    "nb_layers": 64,
-    "nb_dimensions": 8192,
-    "nb_heads": 64,
-    "nb_ffn_layers": 28672,
-    "nb_tokens": 15.0,
-    "gqa": true
-  },
-  {
     "model": "openelm-270M",
     "release_date": "2024-04-22",
     "context_length": 2048,
@@ -140,6 +114,32 @@
     "activation": "SiLU"
   },
   {
+    "model": "llama-3-8b",
+    "release_date": "2024-04-18",
+    "context_length": 8192,
+    "vocabulary_size": 128256,
+    "nb_parameters": 8.0,
+    "nb_layers": 32,
+    "nb_dimensions": 4096,
+    "nb_heads": 32,
+    "nb_ffn_layers": 14336,
+    "nb_tokens": 15.0,
+    "gqa": true
+  },
+  {
+    "model": "llama-3-70b",
+    "release_date": "2024-04-18",
+    "context_length": 8192,
+    "vocabulary_size": 128256,
+    "nb_parameters": 70.0,
+    "nb_layers": 64,
+    "nb_dimensions": 8192,
+    "nb_heads": 64,
+    "nb_ffn_layers": 28672,
+    "nb_tokens": 15.0,
+    "gqa": true
+  },
+  {
     "model": "mixtral-8x22b",
     "release_date": "2024-04-17",
     "context_length": 65536,
@@ -153,20 +153,6 @@
     "activation": "SiLU"
   },
   {
-    "model": "gemma-7b",
-    "release_date": "2024-03-13",
-    "context_length": 8192,
-    "vocabulary_size": 256000,
-    "nb_parameters": 7.0,
-    "nb_layers": 28,
-    "nb_dimensions": 3072,
-    "nb_heads": 16,
-    "nb_ffn_layers": 49152,
-    "nb_tokens": 6.0,
-    "gqa": false,
-    "activation": "GeGLU"
-  },
-  {
     "model": "gemma-2b",
     "release_date": "2024-03-13",
     "context_length": 8192,
@@ -177,6 +163,20 @@
     "nb_heads": 8,
     "nb_ffn_layers": 32768,
     "nb_tokens": 3.0,
+    "gqa": false,
+    "activation": "GeGLU"
+  },
+  {
+    "model": "gemma-7b",
+    "release_date": "2024-03-13",
+    "context_length": 8192,
+    "vocabulary_size": 256000,
+    "nb_parameters": 7.0,
+    "nb_layers": 28,
+    "nb_dimensions": 3072,
+    "nb_heads": 16,
+    "nb_ffn_layers": 49152,
+    "nb_tokens": 6.0,
     "gqa": false,
     "activation": "GeGLU"
   },
@@ -223,7 +223,7 @@
     "hardware": "A100-80GB",
     "gpu_hours": 184320.0,
     "gpu_power": 400.0,
-    "tCO2eq": 31.22
+    "tco2eq": 31.22
   },
   {
     "model": "llama-2-13b",
@@ -241,7 +241,7 @@
     "hardware": "A100-80GB",
     "gpu_hours": 368640.0,
     "gpu_power": 400.0,
-    "tCO2eq": 62.44
+    "tco2eq": 62.44
   },
   {
     "model": "llama-2-34b",
@@ -259,7 +259,7 @@
     "hardware": "A100-80GB",
     "gpu_hours": 1038336.0,
     "gpu_power": 350.0,
-    "tCO2eq": 153.9
+    "tco2eq": 153.9
   },
   {
     "model": "llama-2-70b",
@@ -277,7 +277,7 @@
     "hardware": "A100-80GB",
     "gpu_hours": 1720320.0,
     "gpu_power": 400.0,
-    "tCO2eq": 291.42
+    "tco2eq": 291.42
   },
   {
     "model": "llama-1-7b",
@@ -295,7 +295,7 @@
     "hardware": "A100-80GB",
     "gpu_hours": 82432.0,
     "gpu_power": 400.0,
-    "tCO2eq": 14.0,
+    "tco2eq": 14.0,
     "total_mwh": 36.0
   },
   {
@@ -314,7 +314,7 @@
     "hardware": "A100-80GB",
     "gpu_hours": 135168.0,
     "gpu_power": 400.0,
-    "tCO2eq": 23.0,
+    "tco2eq": 23.0,
     "total_mwh": 59.0
   },
   {
@@ -333,7 +333,7 @@
     "hardware": "A100-80GB",
     "gpu_hours": 530432.0,
     "gpu_power": 400.0,
-    "tCO2eq": 90.0,
+    "tco2eq": 90.0,
     "total_mwh": 233.0
   },
   {
@@ -352,20 +352,152 @@
     "hardware": "A100-80GB",
     "gpu_hours": 1022362.0,
     "gpu_power": 400.0,
-    "tCO2eq": 173.0,
+    "tco2eq": 173.0,
     "total_mwh": 449.0
   },
   {
-    "model": "gpt-3-175B",
-    "release_date": "2020-05-28",
-    "context_length": 2048,
-    "vocabulary_size": 50257,
+    "model": "palm-8B",
+    "release_date": "2022-10-05",
+    "nb_parameters": 8.63,
+    "nb_layers": 32,
+    "nb_dimensions": 4096,
+    "nb_heads": 16,
+    "nb_ffn_layers": 16384,
+    "gqa": false,
+    "activation": "SwiGLU",
+    "hardware": "TPU v4"
+  },
+  {
+    "model": "palm-62B",
+    "release_date": "2022-10-05",
+    "nb_parameters": 62.5,
+    "nb_layers": 64,
+    "nb_dimensions": 8192,
+    "nb_heads": 32,
+    "nb_ffn_layers": 32768,
+    "gqa": false,
+    "activation": "SwiGLU",
+    "hardware": "TPU v4"
+  },
+  {
+    "model": "palm-540B",
+    "release_date": "2022-10-05",
+    "nb_parameters": 540.35,
+    "nb_layers": 118,
+    "nb_dimensions": 18432,
+    "nb_heads": 48,
+    "nb_ffn_layers": 73728,
+    "gqa": false,
+    "activation": "SwiGLU",
+    "hardware": "TPU v4"
+  },
+  {
+    "model": "opt-350M",
+    "release_date": "2022-06-21",
+    "nb_parameters": 0.35,
+    "nb_layers": 24,
+    "nb_dimensions": 1024,
+    "nb_heads": 16,
+    "nb_ffn_layers": 4096,
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
+  },
+  {
+    "model": "opt-1.3B",
+    "release_date": "2022-06-21",
+    "nb_parameters": 1.3,
+    "nb_layers": 24,
+    "nb_dimensions": 2048,
+    "nb_heads": 32,
+    "nb_ffn_layers": 8192,
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
+  },
+  {
+    "model": "opt-175B",
+    "release_date": "2022-06-21",
     "nb_parameters": 175.0,
     "nb_layers": 96,
     "nb_dimensions": 12288,
     "nb_heads": 96,
     "nb_ffn_layers": 49152,
-    "gqa": false
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
+  },
+  {
+    "model": "opt-66B",
+    "release_date": "2022-06-21",
+    "nb_parameters": 66.0,
+    "nb_layers": 64,
+    "nb_dimensions": 9216,
+    "nb_heads": 72,
+    "nb_ffn_layers": 36864,
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
+  },
+  {
+    "model": "opt-30B",
+    "release_date": "2022-06-21",
+    "nb_parameters": 30.0,
+    "nb_layers": 48,
+    "nb_dimensions": 7168,
+    "nb_heads": 56,
+    "nb_ffn_layers": 28672,
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
+  },
+  {
+    "model": "opt-13B",
+    "release_date": "2022-06-21",
+    "nb_parameters": 13.0,
+    "nb_layers": 40,
+    "nb_dimensions": 5120,
+    "nb_heads": 40,
+    "nb_ffn_layers": 20480,
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
+  },
+  {
+    "model": "opt-6.7B",
+    "release_date": "2022-06-21",
+    "nb_parameters": 6.7,
+    "nb_layers": 32,
+    "nb_dimensions": 4096,
+    "nb_heads": 32,
+    "nb_ffn_layers": 16384,
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
+  },
+  {
+    "model": "opt-125M",
+    "release_date": "2022-06-21",
+    "nb_parameters": 0.125,
+    "nb_layers": 12,
+    "nb_dimensions": 768,
+    "nb_heads": 12,
+    "nb_ffn_layers": 3072,
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
+  },
+  {
+    "model": "opt-2.7B",
+    "release_date": "2022-06-21",
+    "nb_parameters": 2.7,
+    "nb_layers": 32,
+    "nb_dimensions": 2560,
+    "nb_heads": 32,
+    "nb_ffn_layers": 10240,
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
   },
   {
     "model": "gpt-3-13B",
@@ -416,15 +548,15 @@
     "gqa": false
   },
   {
-    "model": "gpt-3-large",
+    "model": "gpt-3-small",
     "release_date": "2020-05-28",
     "context_length": 2048,
     "vocabulary_size": 50257,
-    "nb_parameters": 0.76,
-    "nb_layers": 24,
-    "nb_dimensions": 1536,
-    "nb_heads": 16,
-    "nb_ffn_layers": 6144,
+    "nb_parameters": 0.125,
+    "nb_layers": 12,
+    "nb_dimensions": 768,
+    "nb_heads": 12,
+    "nb_ffn_layers": 3072,
     "gqa": false
   },
   {
@@ -440,15 +572,27 @@
     "gqa": false
   },
   {
-    "model": "gpt-3-small",
+    "model": "gpt-3-large",
     "release_date": "2020-05-28",
     "context_length": 2048,
     "vocabulary_size": 50257,
-    "nb_parameters": 0.125,
-    "nb_layers": 12,
-    "nb_dimensions": 768,
-    "nb_heads": 12,
-    "nb_ffn_layers": 3072,
+    "nb_parameters": 0.76,
+    "nb_layers": 24,
+    "nb_dimensions": 1536,
+    "nb_heads": 16,
+    "nb_ffn_layers": 6144,
+    "gqa": false
+  },
+  {
+    "model": "gpt-3-175B",
+    "release_date": "2020-05-28",
+    "context_length": 2048,
+    "vocabulary_size": 50257,
+    "nb_parameters": 175.0,
+    "nb_layers": 96,
+    "nb_dimensions": 12288,
+    "nb_heads": 96,
+    "nb_ffn_layers": 49152,
     "gqa": false
   },
   {
@@ -465,19 +609,6 @@
     "activation": "NewGELU"
   },
   {
-    "model": "bert-base",
-    "release_date": "2018-10-11",
-    "context_length": 512,
-    "vocabulary_size": 30522,
-    "nb_parameters": 0.11,
-    "nb_layers": 12,
-    "nb_dimensions": 768,
-    "nb_heads": 12,
-    "nb_ffn_layers": 3072,
-    "gqa": false,
-    "activation": "GELU"
-  },
-  {
     "model": "bert-large",
     "release_date": "2018-10-11",
     "context_length": 512,
@@ -487,6 +618,19 @@
     "nb_dimensions": 1024,
     "nb_heads": 16,
     "nb_ffn_layers": 4096,
+    "gqa": false,
+    "activation": "GELU"
+  },
+  {
+    "model": "bert-base",
+    "release_date": "2018-10-11",
+    "context_length": 512,
+    "vocabulary_size": 30522,
+    "nb_parameters": 0.11,
+    "nb_layers": 12,
+    "nb_dimensions": 768,
+    "nb_heads": 12,
+    "nb_ffn_layers": 3072,
     "gqa": false,
     "activation": "GELU"
   },
@@ -502,149 +646,5 @@
     "nb_ffn_layers": 3072,
     "gqa": false,
     "activation": "GELU"
-  },
-  {
-    "model": "opt-125M",
-    "release_date": "2022-06-21",
-    "nb_parameters": 0.125,
-    "nb_layers": 12,
-    "nb_dimensions": 768,
-    "nb_heads": 12,
-    "nb_ffn_layers": 3072,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "opt-350M",
-    "release_date": "2022-06-21",
-    "nb_parameters": 0.35,
-    "nb_layers": 24,
-    "nb_dimensions": 1024,
-    "nb_heads": 16,
-    "nb_ffn_layers": 4096,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "opt-1.3B",
-    "release_date": "2022-06-21",
-    "nb_parameters": 1.3,
-    "nb_layers": 24,
-    "nb_dimensions": 2048,
-    "nb_heads": 32,
-    "nb_ffn_layers": 8192,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "opt-2.7B",
-    "release_date": "2022-06-21",
-    "nb_parameters": 2.7,
-    "nb_layers": 32,
-    "nb_dimensions": 2560,
-    "nb_heads": 32,
-    "nb_ffn_layers": 10240,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "opt-6.7B",
-    "release_date": "2022-06-21",
-    "nb_parameters": 6.7,
-    "nb_layers": 32,
-    "nb_dimensions": 4096,
-    "nb_heads": 32,
-    "nb_ffn_layers": 16384,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "opt-13B",
-    "release_date": "2022-06-21",
-    "nb_parameters": 13.0,
-    "nb_layers": 40,
-    "nb_dimensions": 5120,
-    "nb_heads": 40,
-    "nb_ffn_layers": 20480,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "opt-30B",
-    "release_date": "2022-06-21",
-    "nb_parameters": 30.0,
-    "nb_layers": 48,
-    "nb_dimensions": 7168,
-    "nb_heads": 56,
-    "nb_ffn_layers": 28672,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "opt-66B",
-    "release_date": "2022-06-21",
-    "nb_parameters": 66.0,
-    "nb_layers": 64,
-    "nb_dimensions": 9216,
-    "nb_heads": 72,
-    "nb_ffn_layers": 36864,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "opt-175B",
-    "release_date": "2022-06-21",
-    "nb_parameters": 175.0,
-    "nb_layers": 96,
-    "nb_dimensions": 12288,
-    "nb_heads": 96,
-    "nb_ffn_layers": 49152,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "palm-8B",
-    "release_date": "2022-10-05",
-    "nb_parameters": 8.63,
-    "nb_layers": 32,
-    "nb_dimensions": 4096,
-    "nb_heads": 16,
-    "nb_ffn_layers": 16384,
-    "gqa": false,
-    "activation": "SwiGLU",
-    "hardware": "TPU v4"
-  },
-  {
-    "model": "palm-62B",
-    "release_date": "2022-10-05",
-    "nb_parameters": 62.5,
-    "nb_layers": 64,
-    "nb_dimensions": 8192,
-    "nb_heads": 32,
-    "nb_ffn_layers": 32768,
-    "gqa": false,
-    "activation": "SwiGLU",
-    "hardware": "TPU v4"
-  },
-  {
-    "model": "palm-540B",
-    "release_date": "2022-10-05",
-    "nb_parameters": 540.35,
-    "nb_layers": 118,
-    "nb_dimensions": 18432,
-    "nb_heads": 48,
-    "nb_ffn_layers": 73728,
-    "gqa": false,
-    "activation": "SwiGLU",
-    "hardware": "TPU v4"
   }
 ]

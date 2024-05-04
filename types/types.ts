@@ -1,5 +1,6 @@
 type Model = {
   model: string;
+  release_date: string;
   context_length: number;
   vocabulary_size: number;
   nb_parameters: number;
@@ -9,6 +10,11 @@ type Model = {
   nb_ffn_layers: number;
   nb_tokens: number;
   gqa: boolean;
+  activation: string;
+  hardware: string;
+  gpu_hours: number;
+  gpu_power: number;
+  tco2eq: number;
 };
 
 type ColumnMetadata = {
@@ -23,7 +29,7 @@ type ModelMetadata = {
   description: string;
   urlPaper: string;
   source: string;
-  firm: string;
+  company: string;
   releaseDate: string;
 };
 

@@ -33,7 +33,7 @@ const accessors = [
   "hardware",
   "gpu_power",
   "gpu_hours",
-  "tCO2eq",
+  "tco2eq",
 ];
 
 const hiddenColumns = [
@@ -43,7 +43,7 @@ const hiddenColumns = [
   "hardware",
   "gpu_power",
   "gpu_hours",
-  "tCO2eq",
+  "tco2eq",
 ];
 
 const getModelMetadata = (
@@ -171,7 +171,7 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
             <HoverCard>
               <HoverCardTrigger asChild>
                 <div className="flex align-left">
-                  {getImage(modelDesc.firm)}
+                  {getImage(modelDesc.company)}
                   <Button variant="link">
                     <a href={modelDesc.urlPaper} target="_blank">
                       {value}

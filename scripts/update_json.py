@@ -51,8 +51,10 @@ def update_json():
     ]
     df = pd.read_csv(csv_path)
     df["release_date"] = df["release_date"].apply(
-        lambda x: datetime.datetime.strptime(x, "%m/%d/%y").strftime("%Y-%m-%d")
+        lambda x: datetime.datetime.strptime(x, "%m/%d/%y")
     )
+    df = df.sort_values(by="release_date", ascending=False)
+    df["release_date"] = df["release_date"].apply(lambda x: x.strftime("%Y-%m-%d"))
     records = [
         {k: v for k, v in zip(df.columns, r.tolist())}
         for r in df.to_records(index=False)
