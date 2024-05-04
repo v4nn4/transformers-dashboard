@@ -128,7 +128,7 @@
             "family": "opt",
             "company": "meta",
             "description": "OPT: Open Pre-trained Transformer Language Models",
-            "urlPaper": "https://arxiv.org/pdf/2205.01068",
+            "urlPaper": "https://arxiv.org/abs/2205.01068",
             "source": "arxiv",
             "releaseDate": "2022-06-21"
         },
@@ -136,7 +136,7 @@
             "family": "palm",
             "company": "google",
             "description": "PaLM: Scaling Language Modeling with Pathways",
-            "urlPaper": "https://arxiv.org/pdf/2204.02311",
+            "urlPaper": "https://arxiv.org/abs/2204.02311",
             "source": "arxiv",
             "releaseDate": "2022-10-05"
         },
@@ -160,7 +160,7 @@
             "family": "mistral-7b",
             "company": "mistral-ai",
             "description": "Mistral 7B",
-            "urlPaper": "https://arxiv.org/pdf/2310.06825",
+            "urlPaper": "https://arxiv.org/abs/2310.06825",
             "source": "arxiv",
             "releaseDate": "2023-10-10"
         },
@@ -168,7 +168,7 @@
             "family": "mixtral-8x7b",
             "company": "mistral-ai",
             "description": "Mixtral of Experts",
-            "urlPaper": "https://arxiv.org/pdf/2401.04088",
+            "urlPaper": "https://arxiv.org/abs/2401.04088",
             "source": "arxiv",
             "releaseDate": "2024-01-08"
         },
