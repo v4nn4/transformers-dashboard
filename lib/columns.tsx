@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
@@ -16,7 +14,7 @@ import {
   CalendarIcon,
 } from "@radix-ui/react-icons";
 import { ColumnDef } from "@tanstack/react-table";
-import { BlockMath, InlineMath } from "react-katex";
+import { BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
 
 const accessors = [

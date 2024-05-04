@@ -39,7 +39,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { buildInitialVisibilityState } from "./columns";
+import { buildInitialVisibilityState } from "../lib/columns";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];

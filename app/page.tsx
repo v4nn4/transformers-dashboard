@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import { buildColumns } from "./models/columns";
-import { DataTable } from "./models/data-table";
 import { ColumnDef } from "@tanstack/react-table";
-import { getImage } from "./models/columns";
+
+import { buildColumns, getImage } from "@/lib/columns";
+import { DataTable } from "@/components/DataTable";
 import { ModeToggle } from "@/components/ModeToggle";
 
 const HomePage: React.FC = () => {
