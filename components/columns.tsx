@@ -114,11 +114,11 @@ const convertDateFormat = (dateStr: string): string => {
   return formattedDate;
 };
 
-const convertText = (columnMetadata: ColumnMetadata) => {
-  if (columnMetadata.isMath) {
-    return <BlockMath>{columnMetadata.abbr}</BlockMath>;
+const convertText = (text: string, isMath: boolean) => {
+  if (isMath) {
+    return <BlockMath>{text}</BlockMath>;
   } else {
-    return <>{columnMetadata.abbr}</>;
+    return <>{text}</>;
   }
 };
 
@@ -145,7 +145,12 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
                 column.toggleSorting(column.getIsSorted() === "asc")
               }
             >
-              {convertText(columnMetadata)}
+              {convertText(
+                columnMetadata.isMath
+                  ? columnMetadata.abbrMath
+                  : columnMetadata.abbr,
+                columnMetadata.isMath
+              )}
               <HoverCard>
                 <HoverCardTrigger asChild>
                   <InfoCircledIcon className="ml-1" />
@@ -165,7 +170,7 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
                 column.toggleSorting(column.getIsSorted() === "asc")
               }
             >
-              {convertText(columnMetadata)}
+              {convertText(columnMetadata.abbr, columnMetadata.isMath)}
               <CaretSortIcon className="ml-2 h-4 w-4" />
             </Button>
           )}
@@ -249,4 +254,4 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
   });
 };
 
-export { buildColumns, getImage, buildInitialVisibilityState };
+export { buildColumns, getImage, buildInitialVisibilityState, convertText };
