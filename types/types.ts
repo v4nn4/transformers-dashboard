@@ -22,6 +22,7 @@ type ColumnMetadata = {
   name: string;
   abbr: string;
   description: string;
+  isMath: string;
 };
 
 type ModelMetadata = {

@@ -32,25 +32,29 @@
             "accessor": "nb_layers",
             "name": "Number of Layers",
             "abbr": "N",
-            "description": "Number of layers used in encoder/decoder"
+            "description": "Number of layers used in encoder/decoder",
+            "isMath": true
         },
         {
             "accessor": "nb_dimensions",
             "name": "Hidden Dimensions",
-            "abbr": "d_model",
-            "description": "Embedding dimension"
+            "abbr": "d_{\\textrm{model}}",
+            "description": "Embedding dimension",
+            "isMath": true
         },
         {
             "accessor": "nb_heads",
             "name": "Attention Heads",
             "abbr": "h",
-            "description": "Number of attention heads"
+            "description": "Number of attention heads",
+            "isMath": true
         },
         {
             "accessor": "nb_ffn_layers",
             "name": "Feed Forward Layers",
-            "abbr": "d_ff",
-            "description": "Dimension of the feed-forward layer, when applicable"
+            "abbr": "d_{\\textrm{ff}}",
+            "description": "Dimension of the feed-forward layer, when applicable",
+            "isMath": true
         },
         {
             "accessor": "nb_tokens",

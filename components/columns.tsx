@@ -105,13 +105,21 @@ const buildInitialVisibilityState = () => {
   return initialVisibilityState;
 };
 
-let convertDateFormat = (dateStr: string): string => {
+const convertDateFormat = (dateStr: string): string => {
   const date = new Date(dateStr);
   const formattedDate = date.toLocaleDateString("en-US", {
     month: "long",
     year: "numeric",
   });
   return formattedDate;
+};
+
+const convertText = (columnMetadata: ColumnMetadata) => {
+  if (columnMetadata.isMath) {
+    return <BlockMath>{columnMetadata.abbr}</BlockMath>;
+  } else {
+    return <>{columnMetadata.abbr}</>;
+  }
 };
 
 const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
@@ -137,7 +145,7 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
                 column.toggleSorting(column.getIsSorted() === "asc")
               }
             >
-              {columnMetadata.abbr}
+              {convertText(columnMetadata)}
               <HoverCard>
                 <HoverCardTrigger asChild>
                   <InfoCircledIcon className="ml-1" />
@@ -157,7 +165,7 @@ const buildColumns = (metadata: Metadata): ColumnDef<Model>[] => {
                 column.toggleSorting(column.getIsSorted() === "asc")
               }
             >
-              {columnMetadata.abbr}
+              {convertText(columnMetadata)}
               <CaretSortIcon className="ml-2 h-4 w-4" />
             </Button>
           )}
