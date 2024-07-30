@@ -60,7 +60,7 @@ const HomePage: React.FC = () => {
           >
             shadcn/ui
           </a>
-          . Last updated on 2024-05-02.
+          . Last updated on 2024-07-31.
         </p>
         <div className="min-w-10">
           <a

@@ -219,6 +219,54 @@
             "urlPaper": "https://ai.meta.com/blog/meta-llama-3/",
             "source": "meta",
             "releaseDate": "2024-04-18"
+        },
+        {
+            "family": "llama-3.1",
+            "company": "meta",
+            "description": "The Llama 3 Herd of Models",
+            "urlPaper": "https://ai.meta.com/research/publications/the-llama-3-herd-of-models/",
+            "source": "meta",
+            "releaseDate": "2024-07-23"
+        },
+        {
+            "family": "gemini-1.0",
+            "company": "google",
+            "description": "Gemini: A Family of Highly Capable Multimodal Models",
+            "urlPaper": "https://arxiv.org/abs/2403.05530",
+            "source": "arxiv",
+            "releaseDate": "2023-12-19"
+        },
+        {
+            "family": "gemini-1.5",
+            "company": "google",
+            "description": "Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context",
+            "urlPaper": "https://arxiv.org/abs/2403.05530",
+            "source": "arxiv",
+            "releaseDate": "2024-03-08"
+        },
+        {
+            "family": "gpt-4",
+            "company": "openai",
+            "description": "GPT-4 Technical Report",
+            "urlPaper": "https://arxiv.org/abs/2303.08774",
+            "source": "arxiv",
+            "releaseDate": "2020-03-14"
+        },
+        {
+            "family": "gpt-4o",
+            "company": "openai",
+            "description": "Hello GPT-4o",
+            "urlPaper": "https://openai.com/index/hello-gpt-4o/",
+            "source": "openai",
+            "releaseDate": "2020-05-13"
+        },
+        {
+            "family": "gpt-4o-mini",
+            "company": "openai",
+            "description": "GPT-4o mini: advancing cost-efficient intelligence",
+            "urlPaper": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+            "source": "openai",
+            "releaseDate": "2020-07-18"
         }
     ],
     "activations": [
