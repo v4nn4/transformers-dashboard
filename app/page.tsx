@@ -8,6 +8,7 @@ import { ModeToggle } from "@/components/ModeToggle";
 const HomePage: React.FC = () => {
   const [data, setData] = useState<Model[]>([]);
   const [columns, setColumns] = useState<ColumnDef<Model>[]>([]);
+  const [lastUpdated, setLastUpdated] = useState<string>();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,6 +22,7 @@ const HomePage: React.FC = () => {
       });
       let metadata: Metadata = await metadataResponse.json();
       setColumns(buildColumns(metadata));
+      setLastUpdated(metadata.lastUpdated);
     };
     fetchData();
   }, []);
@@ -60,7 +62,7 @@ const HomePage: React.FC = () => {
           >
             shadcn/ui
           </a>
-          . Last updated on 2024-07-31.
+          . Last updated on {lastUpdated}.
         </p>
         <div className="min-w-10">
           <a

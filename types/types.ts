@@ -41,6 +41,7 @@ type ActivationMetadata = {
 };
 
 type Metadata = {
+  lastUpdated: string;
   columns: ColumnMetadata[];
   models: ModelMetadata[];
   activations: ActivationMetadata[];
