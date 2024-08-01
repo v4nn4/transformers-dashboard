@@ -50,9 +50,9 @@
     "context_length": 128000
   },
   {
-    "model": "gemini-1.5-pro",
-    "release_date": "2024-05-24",
-    "context_length": 10000000
+    "model": "claude-3.5-sonnet",
+    "release_date": "2024-06-21",
+    "context_length": 200000
   },
   {
     "model": "gemini-1.5-flash",
@@ -60,69 +60,40 @@
     "context_length": 2000000
   },
   {
+    "model": "gemini-1.5-pro",
+    "release_date": "2024-05-24",
+    "context_length": 10000000
+  },
+  {
     "model": "gpt-4o",
     "release_date": "2024-05-13",
     "context_length": 128000
   },
   {
-    "model": "openelm-270M",
+    "model": "phi-3-medium",
     "release_date": "2024-04-22",
-    "context_length": 2048,
-    "vocabulary_size": 32000,
-    "nb_parameters": 0.27,
-    "nb_layers": 16,
-    "nb_dimensions": 1280,
-    "nb_heads": 10,
-    "nb_tokens": 1.8,
-    "gqa": false,
-    "activation": "SwiGLU",
-    "hardware": "A100-80GB",
-    "gpu_hours": 9216.0
+    "context_length": 8192,
+    "vocabulary_size": 100352,
+    "nb_parameters": 14.0,
+    "nb_layers": 40,
+    "nb_dimensions": 5120,
+    "nb_heads": 40,
+    "nb_tokens": 4.8,
+    "gqa": true,
+    "activation": "SiLU"
   },
   {
-    "model": "openelm-450M",
+    "model": "phi-3-small",
     "release_date": "2024-04-22",
-    "context_length": 2048,
-    "vocabulary_size": 32000,
-    "nb_parameters": 0.45,
-    "nb_layers": 20,
-    "nb_dimensions": 1536,
-    "nb_heads": 12,
-    "nb_tokens": 1.8,
-    "gqa": false,
-    "activation": "SwiGLU",
-    "hardware": "H100-80GB",
-    "gpu_hours": 9216.0
-  },
-  {
-    "model": "openelm-1.1B",
-    "release_date": "2024-04-22",
-    "context_length": 2048,
-    "vocabulary_size": 32000,
-    "nb_parameters": 1.1,
-    "nb_layers": 28,
-    "nb_dimensions": 2048,
-    "nb_heads": 16,
-    "nb_tokens": 1.8,
-    "gqa": false,
-    "activation": "SwiGLU",
-    "hardware": "A100-80GB",
-    "gpu_hours": 33792.0
-  },
-  {
-    "model": "openelm-3B",
-    "release_date": "2024-04-22",
-    "context_length": 2048,
-    "vocabulary_size": 32000,
-    "nb_parameters": 3.0,
-    "nb_layers": 36,
-    "nb_dimensions": 3072,
-    "nb_heads": 24,
-    "nb_tokens": 1.8,
-    "gqa": false,
-    "activation": "SwiGLU",
-    "hardware": "H100-80GB",
-    "gpu_hours": 39936.0
+    "context_length": 8192,
+    "vocabulary_size": 100352,
+    "nb_parameters": 7.0,
+    "nb_layers": 32,
+    "nb_dimensions": 4096,
+    "nb_heads": 32,
+    "nb_tokens": 4.8,
+    "gqa": true,
+    "activation": "SiLU"
   },
   {
     "model": "phi-3-mini",
@@ -153,44 +124,64 @@
     "activation": "SiLU"
   },
   {
-    "model": "phi-3-small",
+    "model": "openelm-3B",
     "release_date": "2024-04-22",
-    "context_length": 8192,
-    "vocabulary_size": 100352,
-    "nb_parameters": 7.0,
-    "nb_layers": 32,
-    "nb_dimensions": 4096,
-    "nb_heads": 32,
-    "nb_tokens": 4.8,
-    "gqa": true,
-    "activation": "SiLU"
+    "context_length": 2048,
+    "vocabulary_size": 32000,
+    "nb_parameters": 3.0,
+    "nb_layers": 36,
+    "nb_dimensions": 3072,
+    "nb_heads": 24,
+    "nb_tokens": 1.8,
+    "gqa": false,
+    "activation": "SwiGLU",
+    "hardware": "H100-80GB",
+    "gpu_hours": 39936.0
   },
   {
-    "model": "phi-3-medium",
+    "model": "openelm-1.1B",
     "release_date": "2024-04-22",
-    "context_length": 8192,
-    "vocabulary_size": 100352,
-    "nb_parameters": 14.0,
-    "nb_layers": 40,
-    "nb_dimensions": 5120,
-    "nb_heads": 40,
-    "nb_tokens": 4.8,
-    "gqa": true,
-    "activation": "SiLU"
+    "context_length": 2048,
+    "vocabulary_size": 32000,
+    "nb_parameters": 1.1,
+    "nb_layers": 28,
+    "nb_dimensions": 2048,
+    "nb_heads": 16,
+    "nb_tokens": 1.8,
+    "gqa": false,
+    "activation": "SwiGLU",
+    "hardware": "A100-80GB",
+    "gpu_hours": 33792.0
   },
   {
-    "model": "llama-3-70b",
-    "release_date": "2024-04-18",
-    "context_length": 8192,
-    "vocabulary_size": 128256,
-    "nb_parameters": 70.0,
-    "nb_layers": 64,
-    "nb_dimensions": 8192,
-    "nb_heads": 64,
-    "nb_ffn_layers": 28672,
-    "nb_tokens": 15.0,
-    "gqa": true,
-    "activation": "SwiGLU"
+    "model": "openelm-450M",
+    "release_date": "2024-04-22",
+    "context_length": 2048,
+    "vocabulary_size": 32000,
+    "nb_parameters": 0.45,
+    "nb_layers": 20,
+    "nb_dimensions": 1536,
+    "nb_heads": 12,
+    "nb_tokens": 1.8,
+    "gqa": false,
+    "activation": "SwiGLU",
+    "hardware": "H100-80GB",
+    "gpu_hours": 9216.0
+  },
+  {
+    "model": "openelm-270M",
+    "release_date": "2024-04-22",
+    "context_length": 2048,
+    "vocabulary_size": 32000,
+    "nb_parameters": 0.27,
+    "nb_layers": 16,
+    "nb_dimensions": 1280,
+    "nb_heads": 10,
+    "nb_tokens": 1.8,
+    "gqa": false,
+    "activation": "SwiGLU",
+    "hardware": "A100-80GB",
+    "gpu_hours": 9216.0
   },
   {
     "model": "llama-3-8b",
@@ -202,6 +193,20 @@
     "nb_dimensions": 4096,
     "nb_heads": 32,
     "nb_ffn_layers": 14336,
+    "nb_tokens": 15.0,
+    "gqa": true,
+    "activation": "SwiGLU"
+  },
+  {
+    "model": "llama-3-70b",
+    "release_date": "2024-04-18",
+    "context_length": 8192,
+    "vocabulary_size": 128256,
+    "nb_parameters": 70.0,
+    "nb_layers": 64,
+    "nb_dimensions": 8192,
+    "nb_heads": 64,
+    "nb_ffn_layers": 28672,
     "nb_tokens": 15.0,
     "gqa": true,
     "activation": "SwiGLU"
@@ -253,6 +258,21 @@
     "activation": "GeGLU"
   },
   {
+    "model": "claude-3-opus",
+    "release_date": "2024-03-04",
+    "context_length": 200000
+  },
+  {
+    "model": "claude-3-sonnet",
+    "release_date": "2024-03-04",
+    "context_length": 200000
+  },
+  {
+    "model": "claude-3-haiku",
+    "release_date": "2024-03-04",
+    "context_length": 200000
+  },
+  {
     "model": "gemini-1.0-nano-2",
     "release_date": "2024-02-15",
     "context_length": 32000,
@@ -265,12 +285,12 @@
     "nb_parameters": 1.8
   },
   {
-    "model": "gemini-1.0-pro",
+    "model": "gemini-1.0-ultra",
     "release_date": "2024-02-15",
     "context_length": 32000
   },
   {
-    "model": "gemini-1.0-ultra",
+    "model": "gemini-1.0-pro",
     "release_date": "2024-02-15",
     "context_length": 32000
   },
@@ -288,6 +308,11 @@
     "activation": "SiLU"
   },
   {
+    "model": "claude-2.1",
+    "release_date": "2023-11-21",
+    "context_length": 200000
+  },
+  {
     "model": "mistral-7b",
     "release_date": "2023-10-10",
     "context_length": 8192,
@@ -302,40 +327,22 @@
     "activation": "SiLU"
   },
   {
-    "model": "llama-2-34b",
+    "model": "llama-2-13b",
     "release_date": "2023-07-18",
     "context_length": 4096,
     "vocabulary_size": 32000,
-    "nb_parameters": 34.0,
-    "nb_layers": 60,
-    "nb_dimensions": 6656,
-    "nb_heads": 52,
-    "nb_ffn_layers": 22016,
+    "nb_parameters": 13.0,
+    "nb_layers": 40,
+    "nb_dimensions": 5120,
+    "nb_heads": 40,
+    "nb_ffn_layers": 13824,
     "nb_tokens": 2.0,
-    "gqa": true,
+    "gqa": false,
     "activation": "SwiGLU",
     "hardware": "A100-80GB",
-    "gpu_hours": 1038336.0,
-    "gpu_power": 350.0,
-    "tco2eq": 153.9
-  },
-  {
-    "model": "llama-2-70b",
-    "release_date": "2023-07-18",
-    "context_length": 4096,
-    "vocabulary_size": 32000,
-    "nb_parameters": 70.0,
-    "nb_layers": 80,
-    "nb_dimensions": 8192,
-    "nb_heads": 64,
-    "nb_ffn_layers": 28672,
-    "nb_tokens": 2.0,
-    "gqa": true,
-    "activation": "SwiGLU",
-    "hardware": "A100-80GB",
-    "gpu_hours": 1720320.0,
+    "gpu_hours": 368640.0,
     "gpu_power": 400.0,
-    "tco2eq": 291.42
+    "tco2eq": 62.44
   },
   {
     "model": "llama-2-7b",
@@ -356,22 +363,45 @@
     "tco2eq": 31.22
   },
   {
-    "model": "llama-2-13b",
+    "model": "llama-2-70b",
     "release_date": "2023-07-18",
     "context_length": 4096,
     "vocabulary_size": 32000,
-    "nb_parameters": 13.0,
-    "nb_layers": 40,
-    "nb_dimensions": 5120,
-    "nb_heads": 40,
-    "nb_ffn_layers": 13824,
+    "nb_parameters": 70.0,
+    "nb_layers": 80,
+    "nb_dimensions": 8192,
+    "nb_heads": 64,
+    "nb_ffn_layers": 28672,
     "nb_tokens": 2.0,
-    "gqa": false,
+    "gqa": true,
     "activation": "SwiGLU",
     "hardware": "A100-80GB",
-    "gpu_hours": 368640.0,
+    "gpu_hours": 1720320.0,
     "gpu_power": 400.0,
-    "tco2eq": 62.44
+    "tco2eq": 291.42
+  },
+  {
+    "model": "llama-2-34b",
+    "release_date": "2023-07-18",
+    "context_length": 4096,
+    "vocabulary_size": 32000,
+    "nb_parameters": 34.0,
+    "nb_layers": 60,
+    "nb_dimensions": 6656,
+    "nb_heads": 52,
+    "nb_ffn_layers": 22016,
+    "nb_tokens": 2.0,
+    "gqa": true,
+    "activation": "SwiGLU",
+    "hardware": "A100-80GB",
+    "gpu_hours": 1038336.0,
+    "gpu_power": 350.0,
+    "tco2eq": 153.9
+  },
+  {
+    "model": "claude-2",
+    "release_date": "2023-07-11",
+    "context_length": 100000
   },
   {
     "model": "llama-1-65b",
@@ -486,85 +516,13 @@
     "hardware": "TPU v4"
   },
   {
-    "model": "opt-30B",
+    "model": "opt-6.7B",
     "release_date": "2022-06-21",
-    "nb_parameters": 30.0,
-    "nb_layers": 48,
-    "nb_dimensions": 7168,
-    "nb_heads": 56,
-    "nb_ffn_layers": 28672,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "opt-175B",
-    "release_date": "2022-06-21",
-    "nb_parameters": 175.0,
-    "nb_layers": 96,
-    "nb_dimensions": 12288,
-    "nb_heads": 96,
-    "nb_ffn_layers": 49152,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "opt-66B",
-    "release_date": "2022-06-21",
-    "nb_parameters": 66.0,
-    "nb_layers": 64,
-    "nb_dimensions": 9216,
-    "nb_heads": 72,
-    "nb_ffn_layers": 36864,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "opt-2.7B",
-    "release_date": "2022-06-21",
-    "nb_parameters": 2.7,
+    "nb_parameters": 6.7,
     "nb_layers": 32,
-    "nb_dimensions": 2560,
+    "nb_dimensions": 4096,
     "nb_heads": 32,
-    "nb_ffn_layers": 10240,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "opt-13B",
-    "release_date": "2022-06-21",
-    "nb_parameters": 13.0,
-    "nb_layers": 40,
-    "nb_dimensions": 5120,
-    "nb_heads": 40,
-    "nb_ffn_layers": 20480,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "opt-1.3B",
-    "release_date": "2022-06-21",
-    "nb_parameters": 1.3,
-    "nb_layers": 24,
-    "nb_dimensions": 2048,
-    "nb_heads": 32,
-    "nb_ffn_layers": 8192,
-    "gqa": false,
-    "activation": "ReLU",
-    "hardware": "A100-80GB"
-  },
-  {
-    "model": "opt-350M",
-    "release_date": "2022-06-21",
-    "nb_parameters": 0.35,
-    "nb_layers": 24,
-    "nb_dimensions": 1024,
-    "nb_heads": 16,
-    "nb_ffn_layers": 4096,
+    "nb_ffn_layers": 16384,
     "gqa": false,
     "activation": "ReLU",
     "hardware": "A100-80GB"
@@ -582,28 +540,88 @@
     "hardware": "A100-80GB"
   },
   {
-    "model": "opt-6.7B",
+    "model": "opt-350M",
     "release_date": "2022-06-21",
-    "nb_parameters": 6.7,
-    "nb_layers": 32,
-    "nb_dimensions": 4096,
-    "nb_heads": 32,
-    "nb_ffn_layers": 16384,
+    "nb_parameters": 0.35,
+    "nb_layers": 24,
+    "nb_dimensions": 1024,
+    "nb_heads": 16,
+    "nb_ffn_layers": 4096,
     "gqa": false,
     "activation": "ReLU",
     "hardware": "A100-80GB"
   },
   {
-    "model": "gpt-3-xl",
-    "release_date": "2020-05-28",
-    "context_length": 2048,
-    "vocabulary_size": 50257,
+    "model": "opt-2.7B",
+    "release_date": "2022-06-21",
+    "nb_parameters": 2.7,
+    "nb_layers": 32,
+    "nb_dimensions": 2560,
+    "nb_heads": 32,
+    "nb_ffn_layers": 10240,
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
+  },
+  {
+    "model": "opt-1.3B",
+    "release_date": "2022-06-21",
     "nb_parameters": 1.3,
     "nb_layers": 24,
     "nb_dimensions": 2048,
-    "nb_heads": 24,
+    "nb_heads": 32,
     "nb_ffn_layers": 8192,
-    "gqa": false
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
+  },
+  {
+    "model": "opt-13B",
+    "release_date": "2022-06-21",
+    "nb_parameters": 13.0,
+    "nb_layers": 40,
+    "nb_dimensions": 5120,
+    "nb_heads": 40,
+    "nb_ffn_layers": 20480,
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
+  },
+  {
+    "model": "opt-30B",
+    "release_date": "2022-06-21",
+    "nb_parameters": 30.0,
+    "nb_layers": 48,
+    "nb_dimensions": 7168,
+    "nb_heads": 56,
+    "nb_ffn_layers": 28672,
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
+  },
+  {
+    "model": "opt-66B",
+    "release_date": "2022-06-21",
+    "nb_parameters": 66.0,
+    "nb_layers": 64,
+    "nb_dimensions": 9216,
+    "nb_heads": 72,
+    "nb_ffn_layers": 36864,
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
+  },
+  {
+    "model": "opt-175B",
+    "release_date": "2022-06-21",
+    "nb_parameters": 175.0,
+    "nb_layers": 96,
+    "nb_dimensions": 12288,
+    "nb_heads": 96,
+    "nb_ffn_layers": 49152,
+    "gqa": false,
+    "activation": "ReLU",
+    "hardware": "A100-80GB"
   },
   {
     "model": "gpt-3-175B",
@@ -654,15 +672,15 @@
     "gqa": false
   },
   {
-    "model": "gpt-3-medium",
+    "model": "gpt-3-xl",
     "release_date": "2020-05-28",
     "context_length": 2048,
     "vocabulary_size": 50257,
-    "nb_parameters": 0.35,
+    "nb_parameters": 1.3,
     "nb_layers": 24,
-    "nb_dimensions": 1024,
-    "nb_heads": 16,
-    "nb_ffn_layers": 4096,
+    "nb_dimensions": 2048,
+    "nb_heads": 24,
+    "nb_ffn_layers": 8192,
     "gqa": false
   },
   {
@@ -675,6 +693,18 @@
     "nb_dimensions": 1536,
     "nb_heads": 16,
     "nb_ffn_layers": 6144,
+    "gqa": false
+  },
+  {
+    "model": "gpt-3-medium",
+    "release_date": "2020-05-28",
+    "context_length": 2048,
+    "vocabulary_size": 50257,
+    "nb_parameters": 0.35,
+    "nb_layers": 24,
+    "nb_dimensions": 1024,
+    "nb_heads": 16,
+    "nb_ffn_layers": 4096,
     "gqa": false
   },
   {
@@ -703,19 +733,6 @@
     "activation": "NewGELU"
   },
   {
-    "model": "bert-base",
-    "release_date": "2018-10-11",
-    "context_length": 512,
-    "vocabulary_size": 30522,
-    "nb_parameters": 0.11,
-    "nb_layers": 12,
-    "nb_dimensions": 768,
-    "nb_heads": 12,
-    "nb_ffn_layers": 3072,
-    "gqa": false,
-    "activation": "GELU"
-  },
-  {
     "model": "bert-large",
     "release_date": "2018-10-11",
     "context_length": 512,
@@ -725,6 +742,19 @@
     "nb_dimensions": 1024,
     "nb_heads": 16,
     "nb_ffn_layers": 4096,
+    "gqa": false,
+    "activation": "GELU"
+  },
+  {
+    "model": "bert-base",
+    "release_date": "2018-10-11",
+    "context_length": 512,
+    "vocabulary_size": 30522,
+    "nb_parameters": 0.11,
+    "nb_layers": 12,
+    "nb_dimensions": 768,
+    "nb_heads": 12,
+    "nb_ffn_layers": 3072,
     "gqa": false,
     "activation": "GELU"
   },

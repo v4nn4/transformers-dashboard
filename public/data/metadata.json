@@ -267,6 +267,39 @@
             "urlPaper": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
             "source": "openai",
             "releaseDate": "2020-07-18"
+        },
+        {
+            "family": "claude-3.5",
+            "company": "anthropic",
+            "description": "Claude 3.5 Sonnet",
+            "urlPaper": "https://www.anthropic.com/news/claude-3-5-sonnet",
+            "source": "anthropic",
+            "releaseDate": "2024-06-21"
+        },
+        {
+            "family": "claude-3",
+            "company": "anthropic",
+            "description": "Introducing the next generation of Claude",
+            "urlPaper": "https://www.anthropic.com/news/claude-3-family",
+            "source": "anthropic",
+            "releaseDate": "2024-03-04"
+        },
+        {
+            "family": "claude-2.1",
+            "company": "anthropic",
+            "description": "Introducing Claude 2.1",
+            "urlPaper": "https://www.anthropic.com/news/claude-2-1",
+            "source": "anthropic",
+            "releaseDate": "2023-11-21"
+        },
+        {
+            
+            "family": "claude-2",
+            "company": "anthropic",
+            "description": "Claude 2",
+            "urlPaper": "https://www.anthropic.com/news/claude-2",
+            "source": "anthropic",
+            "releaseDate": "2023-07-11"
         }
     ],
     "activations": [
