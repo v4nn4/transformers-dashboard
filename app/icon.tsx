@@ -1,4 +1,3 @@
-import Logo from "@/components/Logo";
 import { ImageResponse } from "next/og";
 
 // Image metadata
